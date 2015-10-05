@@ -357,7 +357,7 @@
 		var xhr = window.XMLHttpRequest ? new window.XMLHttpRequest : new window.ActiveXObject("Microsoft.XMLHTTP");
 		var pageTokens = {};
 
-		xhr.open("POST", "%SERVLET_PATH%", false);
+		xhr.open("POST", "%SERVLET_PATH%?timestamp=" + new Date().getTime(), false);
 		xhr.send(null);
 
 		var text = xhr.responseText;
